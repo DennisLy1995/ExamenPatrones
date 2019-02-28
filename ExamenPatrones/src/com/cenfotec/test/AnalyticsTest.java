@@ -21,13 +21,13 @@ public class AnalyticsTest {
 		String[] arregloResultado1 = Analytics.LaMasLarga(frase1);
 		String[] arregloResultado2 = Analytics.LaMasLarga(frase2);
 		
-		//assertEquals(arregloResultado1, arreglo1, "Resultado deberia de ser casotota");
-		//assertEquals(arregloResultado2, arreglo2, "Resultado deberia de ser casotota");
-		//assertEquals(arregloResultado3, arreglo3, "Resultado deberia de ser casa, cosa");
 		Assert.assertArrayEquals( arregloResultado1, arreglo1 );
 		Assert.assertArrayEquals( arregloResultado2, arreglo2 );
 		
 	}
+	
+	
+	
 	
 	
 	@Test
@@ -42,11 +42,59 @@ public class AnalyticsTest {
 		String[] arregloResultado1 = Analytics.LaMasCorta(frase1);
 		String[] arregloResultado2 = Analytics.LaMasCorta(frase2);
 		
-		//assertEquals(arregloResultado1, arreglo1, "Resultado deberia de ser casotota");
-		//assertEquals(arregloResultado2, arreglo2, "Resultado deberia de ser casotota");
-		//assertEquals(arregloResultado3, arreglo3, "Resultado deberia de ser casa, cosa");
 		Assert.assertArrayEquals( arregloResultado1, arreglo1 );
 		Assert.assertArrayEquals( arregloResultado2, arreglo2 );
 	}
+	/*
+	@Test
+	public void TestLaMasLargaOrdenado() {
+		
+		String frase1 = "casa casita casotota casotita";
+		String frase2 = "casa mia cosa ala";
+		
+		String[] arreglo1 = {"casotota", "casotita"};
+		String[] arreglo2 = {"casa", "cosa"};
+		
+		String[] arregloResultado1 = Analytics.LaMasCorta(frase1);
+		String[] arregloResultado2 = Analytics.LaMasCorta(frase2);
+		
+		Assert.assertArrayEquals( arregloResultado1, arreglo1 );
+		Assert.assertArrayEquals( arregloResultado2, arreglo2 );
+	}
+	
+	@Test
+	public void TestLaMasCortaOrdenado() {
+		
+		String frase1 = "casa alto casita casotota";
+		String frase2 = "casa mia cosa ala";
+		
+		String[] arreglo1 = {"alto", "casa"};
+		String[] arreglo2 = {"ala", "mia"};
+		
+		String[] arregloResultado1 = Analytics.LaMasCorta(frase1);
+		String[] arregloResultado2 = Analytics.LaMasCorta(frase2);
+		
+		Assert.assertArrayEquals( arregloResultado1, arreglo1 );
+		Assert.assertArrayEquals( arregloResultado2, arreglo2 );
+	}
+	*/
+	
+	@Test
+	public void TestLaPrimeraMasLarga() {
+		
+		String frase1 = "casa casita casotota casotita";
+		String frase2 = "casa mia cosa";
+		
+		String[] arreglo1 = {"casotota"};
+		String[] arreglo2 = {"casa"};
+		
+		String[] arregloResultado1 = Analytics.PrimeraMasLarga(frase1);
+		String[] arregloResultado2 = Analytics.PrimeraMasLarga(frase2);
+		
+		Assert.assertArrayEquals( arregloResultado1, arreglo1 );
+		Assert.assertArrayEquals( arregloResultado2, arreglo2 );
+		
+	}
+	
 	
 }
