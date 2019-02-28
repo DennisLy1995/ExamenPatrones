@@ -38,7 +38,7 @@ public class Analytics {
 		for(int i=0;i<arregloRetorno.length;i++) {
 			System.out.println(arregloRetorno[i]);
 		}
-		
+		Arrays.sort(arregloRetorno);
 		return arregloRetorno;
 	}
 
@@ -73,6 +73,7 @@ public class Analytics {
 			}
 		}
 		arregloRetorno = frasePalabras.split(" ");
+		Arrays.sort(arregloRetorno);
 		return arregloRetorno;
 	}
 	
